@@ -1,0 +1,478 @@
+/************* Styles Body *************/
+
+body {
+	margin:0;
+	padding:0;
+	background-color:#000000;
+}
+
+a img {
+	border:none;
+}
+
+#diapos img {
+	position:absolute;
+}
+
+/*****************************************************************************************/
+/************* Styles Container Accueil - Prestations - News - Liens Utiles *************/
+/***************************************************************************************/
+
+/***** Styles Container *****/
+
+.Container {
+	width:1026px;
+	height:702px;
+	margin:0 auto 0 -512px;
+	position:relative;
+	left:50%;
+	z-index:0;
+}
+
+/***** Styles Container Header *****/
+
+.Container_header {
+	width:1026px;
+	height:124px;
+}
+
+/***** Styles Container Center *****/
+
+.Container_Center {
+	width:1026px;
+	height:578px;
+}
+
+/** Styles Container Left **/
+.Container_Left {
+	width:49px;
+	height:578px;
+	float:left;
+	background:url(../images/Center/Left/LumieresDuSud_Left.jpg) no-repeat;
+}
+
+/** Styles Container Middle **/
+.Container_Middle {
+	width:906px;
+	height:578px;
+	float:left;
+	background-color: #FFFFFF;
+}
+
+.Container_Middle_ImgHeader {
+	width:880px;
+	height:292px;
+	float:left;
+	border-top:13px #343434 solid;
+	border-left:13px #343434 solid;
+	border-right:13px #343434 solid;
+}
+
+.Container_Middle_Menu {
+	width:880px;
+	height:30px;
+	float:left;
+	background-color:#343434;
+	border-left:13px #343434 solid;
+	border-right:13px #343434 solid;
+}
+
+.Container_Middle_Menu ul{
+	margin:5px 0 0 0;
+	padding:0;
+	text-align:center;
+}
+
+.Container_Middle_Menu ul li{
+	list-style-type:none;
+	display: inline;
+	font-family: "Trebuchet ms",sans-serif;
+	color:#adadad;
+	font-weight:bold;
+	font-size:0.9em;
+	
+}
+
+.Container_Middle_Menu ul li a {
+	list-style-type:none;
+	display: inline;
+	text-decoration:none;
+	color:#adadad;
+	padding:0 6px 0 6px;
+}
+
+.Container_Middle_Menu ul li a:hover {
+	background:#1c1c1c;
+	text-decoration: none;
+	padding:0 6px 0 6px;
+}
+
+.Container_Middle_Menu_ok {
+	background:#1c1c1c;
+	text-decoration: none;
+	padding:0 12px 0 12px;
+	font-family: font-family: "Trebuchet ms",sans-serif;
+	color:#e0d595;
+	font-weight:bold;
+	font-size:1.0em;
+}
+
+.Container_Middle_Footer {
+	width:880px;
+	height:230px;
+	float:left;
+	border-left:13px #343434 solid;
+	border-right:13px #343434 solid;
+	border-bottom:13px #343434 solid;
+	background:url(../images/Center/Middle/background_Right.jpg) right no-repeat;
+}
+
+.Container_Middle_Footer_Cont {
+	width:553px;
+	height:230px;
+	float:left;
+}
+
+.Container_Middle_Footer_Title {
+	width:553px;
+	height:29px;
+	float:left;
+	background-color:#161616;
+}
+
+.Container_Middle_Footer_Txt {
+	width:513px;
+	height:191px;
+	float:left;
+	/*font-family: "Times New Roman", Times, serif;*/
+	font-family: "Trebuchet ms",sans-serif;
+	color:#adadad;
+	font-size:0.8em;
+	text-align:justify;
+	padding:5px 20px 5px 20px;
+	background-color:#161616;
+}
+
+.Container_Middle_Footer_Txt a {
+	color:#d4a274;
+	text-decoration:none;
+}
+
+.Container_Middle_Footer_Txt a:hover {
+	color:#adadad;
+	text-decoration:underline;
+}
+
+.Container_Middle_Footer_Imgs {
+	width:299px;
+	height:230px;
+	float:left;
+	margin:0 28px 0 0;
+	background-color:#161616;
+}
+
+/** Styles Container Right **/
+.Container_Right {
+	width:71px;
+	height:578px;
+	float:left;
+	background:url(../images/Center/Right/LumieresDuSud_Right.jpg) no-repeat;
+}
+
+/***** Styles Container Footer *****/
+
+.Container_Footer {
+	width:1026px;
+	height:15px;
+	margin:5px 0 0 0;
+	font-family: "Times New Roman", Times, serif;
+	color:#adadad;
+	font-size:0.8em;
+	text-align:center;
+}
+
+.Container_Footer a {
+	color:#adadad;	
+}
+
+.Container_Footer a:hover {
+	color:#d4a274;
+	text-decoration:none;	
+}
+
+
+/****************************************************************/
+/************* Styles Container Lumieres Ext. Int. *************/
+/**************************************************************/
+
+.container_Big_Imgs {
+	width:880px;
+	height:305px;
+	float:left;
+	border:13px #343434 solid;
+	background:#343434;
+	overflow: hidden;
+}
+
+#conteneur-portfolio {
+	width:2000%;
+}
+
+#conteneur-portfolio div {
+	float:left;
+	margin-right:2px;
+	/*margin-right:20px*/
+	width:145px;
+}
+
+#conteneur-portfolio-big {
+	width:2000%;
+	margin-left:-260px;
+}
+
+#conteneur-portfolio-big div {
+	float:left;
+	margin-right:14px;
+	/*margin-right:20px*/
+	width:460px;
+}
+
+
+.container_Small_Imgs {
+	width:880px;
+	height:99px;
+	float:left;
+	border-left:13px #343434 solid;
+	border-right:13px #343434 solid;
+	background:#161616;
+	overflow: hidden;
+}
+
+.container_Control_Imgs {
+	width:880px;
+	height:31px;
+	float:left;
+	border-left:13px #343434 solid;
+	border-right:13px #343434 solid;
+	background:url(../images/Center/Middle/background_Controle.jpg) no-repeat;
+}
+
+.container_Control_Imgs_Bouton {
+	width:167px;
+	height:24px;
+	margin:5px auto 0 auto;
+}
+
+/*****************************/
+
+.container_Control_Imgs_Bouton_Left {
+	width:46px;
+	height:24px;
+	float:left;
+}
+
+.bouton_Control_Imgs_Bouton_Left_Small {
+	display:block;
+	width:20px;
+	height:24px;
+	background: url(../images/Center/Middle/Bouton/Bouton_ControlSmallLeftUp.png) no-repeat 0 0;
+	float:left;
+}
+
+a.bouton_Control_Imgs_Bouton_Left_Small {
+	display:block;
+	width:20px;
+	height:24px;
+	background: url(../images/Center/Middle/Bouton/Bouton_ControlSmallLeftUp.png) no-repeat 0 0;
+	float:left;
+}
+
+a.bouton_Control_Imgs_Bouton_Left_Small:hover {
+	display:block;
+	width:20px;
+	height:24px;
+	background:url(../images/Center/Middle/Bouton/Bouton_ControlSmallLeftDo.png) no-repeat 0 0;
+	float:left;
+}
+
+.bouton_Control_Imgs_Bouton_Left_Big {
+	display:block;
+	width:26px;
+	height:24px;
+	background: url(../images/Center/Middle/Bouton/Bouton_ControlBigLeftUp.png) no-repeat 0 0;
+	float:left;
+}
+
+a.bouton_Control_Imgs_Bouton_Left_Big {
+	display:block;
+	width:26px;
+	height:24px;
+	background: url(../images/Center/Middle/Bouton/Bouton_ControlBigLeftUp.png) no-repeat 0 0;
+	float:left;
+}
+
+a.bouton_Control_Imgs_Bouton_Left_Big:hover {
+	display:block;
+	width:26px;
+	height:24px;
+	background:url(../images/Center/Middle/Bouton/Bouton_ControlBigLeftDo.png) no-repeat 0 0;
+	float:left;
+}
+
+/***************************/
+
+.container_Control_Imgs_Bouton_Right {
+	width:46px;
+	height:24px;
+	float:right;
+}
+
+.bouton_Control_Imgs_Bouton_Right_Small {
+	display:block;
+	width:20px;
+	height:24px;
+	background: url(../images/Center/Middle/Bouton/Bouton_ControlSmallRighttUp.png) no-repeat 0 0;
+	float:left;
+}
+
+a.bouton_Control_Imgs_Bouton_Right_Small {
+	display:block;
+	width:20px;
+	height:24px;
+	background: url(../images/Center/Middle/Bouton/Bouton_ControlSmallRightUp.png) no-repeat 0 0;
+	float:left;
+}
+
+a.bouton_Control_Imgs_Bouton_Right_Small:hover {
+	display:block;
+	width:20px;
+	height:24px;
+	background:url(../images/Center/Middle/Bouton/Bouton_ControlSmallRightDo.png) no-repeat 0 0;
+	float:left;
+}
+
+.bouton_Control_Imgs_Bouton_Right_Big {
+	display:block;
+	width:26px;
+	height:24px;
+	background: url(../images/Center/Middle/Bouton/Bouton_ControlBigRightUp.png) no-repeat 0 0;
+	float:left;
+}
+
+a.bouton_Control_Imgs_Bouton_Right_Big {
+	display:block;
+	width:26px;
+	height:24px;
+	background: url(../images/Center/Middle/Bouton/Bouton_ControlBigRightUp.png) no-repeat 0 0;
+	float:left;
+}
+
+a.bouton_Control_Imgs_Bouton_Right_Big:hover {
+	display:block;
+	width:26px;
+	height:24px;
+	background:url(../images/Center/Middle/Bouton/Bouton_ControlBigRightDo.png) no-repeat 0 0;
+	float:left;
+}
+
+/***************************/
+
+.container_Titre_Imgs {
+	width:880px;
+	height:20px;
+	float:left;
+	border-left:13px #343434 solid;
+	border-right:13px #343434 solid;
+}
+
+.container_SousMenu_Imgs {
+	width:880px;
+	height:56px;
+	float:left;
+	border-left:13px #343434 solid;
+	border-right:13px #343434 solid;
+	border-bottom:13px #343434 solid;
+	background:url(../images/Center/Middle/background_SousMenu.jpg) no-repeat;
+}
+
+.container_SousMenu_Liens_Imgs {
+	width:880px;
+	height:16px;
+}
+
+.container_SousMenu_Liens_Imgs ul{
+	margin:10px 0 0 0;
+	padding:0;
+	text-align:center;
+}
+
+.container_SousMenu_Liens_Imgs ul li{
+	list-style-type:none;
+	display: inline;
+	font-family: "Trebuchet ms",sans-serif;
+	font-size:0.9em;
+	background:#0f0f0f;
+}
+
+.container_SousMenu_Liens_Imgs ul li a {
+	list-style-type:none;
+	display: inline;
+	text-decoration:none;
+	color:#ffffff;
+	padding:0 12px 0 12px;
+	font-weight:bold;
+}
+
+.container_SousMenu_Liens_Imgs ul li a:hover {
+	text-decoration: none;
+	padding:0 12px 0 12px;
+	color:#adadad;
+}
+
+.container_SousMenu_Liens_Imgs_ok {
+	background:#0f0f0f;
+	text-decoration: none;
+	padding:0 12px 0 12px;
+	color:#515151;
+}
+
+/**********************************************************/
+/************* Styles Container Contact Form *************/
+/********************************************************/
+
+#ContainerIntroForm form {
+	position:relative;
+	z-index:2;
+}
+
+#ContainerIntroForm form label {
+	padding-right:10px;
+	width:80px;
+	text-align:right;
+	display:block;
+	float:left;
+	color:#d0d0d0;
+	font-family: "Times New Roman", Times, serif;
+	font-size:0.8em;
+}
+
+input {
+	/*color:#000000;*/
+	font-family: "Times New Roman", Times, serif;
+	font-size:0.8em;
+}
+
+/*#nom, #prenom, #telephone, #email, #cp, #ville, #societe, #commentaires {
+	width:200px;
+	margin-bottom:1px;
+}
+
+#captcha {
+	margin-top:5px;
+	margin-bottom:5px;
+}
+#captcha_saisie {
+	position:relative;
+	left:150px;
+	background:#ffffff;
+}*/
