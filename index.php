@@ -84,7 +84,7 @@
             <div class="Container_Right"></div>
         </div>
         <div class="Container_Footer">
-        	&copy; 2009 Lumières Du Sud | <a href="#">Crédit</a> | <a href="#">Mentions légales</a> | Création de site Internet : <a href="http://www.inetys.fr" target="_blank">Inetys Communication</a>
+        	&copy; 2009 Lumières Du Sud | <a href="#">Crédit</a> | <a href="#">Mentions légales</a> | Création de site Internet : JD
         </div>
         
     </div>

@@ -5,7 +5,7 @@ $login 		= 'lumieresdusud';
 $pass 		= 'bronzette';
 $db 		= 'lumieresdusud';
 
-$db_local	= 'lumieres'; // Nom de la base de données en LOCAL
+$db_local	= 'lumieresdusud'; // Nom de la base de données en LOCAL
 
 //<---------------------------------------------------->
 

@@ -1,7 +1,7 @@
 <?php
 
 //<------------------------------- CONTACT ------------------------------->
-define('CFG_EMAIL_CONTACT', 'agence@inetys.fr');
+define('CFG_EMAIL_CONTACT', 'djulien83@free.fr');
 //<----------------------------------------------------------------------->
 
 
