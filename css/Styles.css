@@ -453,26 +453,71 @@ a.bouton_Control_Imgs_Bouton_Right_Big:hover {
 	float:left;
 	color:#d0d0d0;
 	font-family: "Times New Roman", Times, serif;
-	font-size:0.8em;
+	font-size:0.9em;
 }
 
-input {
-	/*color:#000000;*/
-	font-family: "Times New Roman", Times, serif;
-	font-size:0.8em;
+#ContainerIntroForm input:required {
+	background: url(../images/red_asterisk.png) 98% center no-repeat white;
 }
 
-/*#nom, #prenom, #telephone, #email, #cp, #ville, #societe, #commentaires {
-	width:200px;
+#ContainerIntroForm span {
+        display: none;
+        font-family: serif;
+}
+
+#ContainerIntroForm input:focus:invalid, textArea:focus:invalid {
+	border-color: #FF0000;
+        border-width: 2px;
+        background: url(../images/invalid.png) 98% center no-repeat white;
+}
+
+#ContainerIntroForm input:focus:invalid + span {
+        margin-left: 95px;
+	display: block;
+        color: #FF0000;
+}
+
+#ContainerIntroForm input:focus:valid {
+	border-color: #56c93f;
+        border-width: 2px;
+        background: url(../images/valid.png) 98% center no-repeat white;
+}
+
+#ContainerIntroForm #nom:valid {
+        background: url(../images/valid.png) 98% center no-repeat white;
+}
+
+#ContainerIntroForm #prenom:valid {
+        background: url(../images/valid.png) 98% center no-repeat white;
+}
+
+#ContainerIntroForm #email:valid {
+        background: url(../images/valid.png) 98% center no-repeat white;
+}
+
+#ContainerIntroForm textArea:required {
+     background: url(../images/red_asterisk.png) 99% 5% no-repeat white;
+}
+
+#nom, #prenom, #telephone, #email, #cp, #ville, #societe {
+	height: 18px;
 	margin-bottom:1px;
+        padding-left: 3px;
+        -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 }
 
-#captcha {
-	margin-top:5px;
-	margin-bottom:5px;
+#commentaires {
+        height: 60px;
+        margin-bottom: 3px;
+        width: 406px;
+        margin-left: 2px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
 }
-#captcha_saisie {
-	position:relative;
-	left:150px;
-	background:#ffffff;
-}*/
+
+#mySubmit {
+        margin-left: 100px;
+}

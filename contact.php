@@ -97,19 +97,19 @@ echo("<div class=\"msg\">$msg</div><br />");
                                 <form method="post" action="contact.php" id="formulaire_contact" onsubmit="verifForm(this); return false;">
                                 	<table style="width:100%;">
                                     	<tr>
-                                        	<td style="width:50%;"><div><label for="nom">Nom * : </label><input type="text" id="nom" name="nom" /></div></td>
-                                            <td style="width:50%;"><div><label for="prenom">Prénom * : </label><input type="text" id="prenom" name="prenom" /></div></td>
+                                        	<td style="width:50%;"><div><label for="nom">Nom : </label><input type="text" id="nom" name="nom" required placeholder="Entrez votre nom" pattern="^[A-Za-zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ/-]+"/><span>Veuillez rentrer votre Nom</span></div></td>
+                                                <td style="width:50%;"><div><label for="prenom">Prénom : </label><input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom" pattern="^[A-Za-zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ/-]+"/><span>Veuillez rentrer votre Prénom</span></div></td>
                                         </tr>
                                         <tr>
                                         	<td style="width:50%;"><div><label for="telephone">Téléphone : </label><input type="text" id="telephone" name="telephone" /></div></td>
-                                            <td style="width:50%;"><div><label for="email">E-mail * : </label><input type="text" id="email" name="email" /></div></td>
+                                            <td style="width:50%;"><div><label for="email">E-mail : </label><input type="email" id="email" name="email" required placeholder="Entrez votre Email"/><span>Veuillez rentrer votre Email</span></div></td>
                                         </tr>
                                         <tr>
                                         	<td style="width:50%;"><div><label for="cp">Code postal : </label><input type="text" id="cp" name="cp" /></div></td>
                                             <td style="width:50%;"><div><label for="ville">Ville : </label><input type="text" id="ville" name="ville" /></div></td>
                                         </tr>
                                         <tr>
-                                        	<td colspan="2" style="width:50%;"><div><label for="commentaires">Commentaires :</label><textarea id="commentaires" name="commentaires" rows="2" cols="45"></textarea></div></td>
+                                        	<td colspan="2" style="width:50%;"><div><label for="commentaires">Commentaires :</label><textarea id="commentaires" name="commentaires" rows="2" cols="45" required placeholder="Entrez votre commentaire"></textarea></div></td>
                                         </tr>
                                         <tr>
                                         	<td colspan="2" style="width:50%; text-align:center"><div><input type="submit" value="Envoyer le Formulaire" id="mySubmit" class="boutton"/></div></td>
