@@ -1,32 +1,32 @@
 <?php
-
-if (count($_POST)) {
-	
-	require('php/class.phpmailer.php');
-
-	$mail = new PHPMailer();
-
-	$mail->From = 'no-reply@lumieresdusud.fr';
-	$mail->FromName = "{$_POST['prenom']} {$_POST['nom']}";
-	$mail->AddAddress('stjo83@mac.com');
-	$mail->Subject = '[Lumières du sud - Formulaire de contact]';
-	$mail->Body    = "Nom : {$_POST['nom']}\nPrénom : {$_POST['prenom']}\nTéléphone : {$_POST['telephone']}\nE-mail : {$_POST['email']}\nCode postal : {$_POST['cp']}\nVille : {$_POST['ville']}\nCommentaires : {$_POST['commentaires']}\n";
-
-	if($mail->Send())  	$retour = 'ok';
-	else 				$retour = 'ko';
+if(!empty($_POST)){
+    extract($_POST);
+    $to = "djulien83@free.fr";
+    $sujet = "Lumières du Sud: Nouveau message de Mr/Mme " . $nom;
+    $entete = "Email reçu de: " . $nom . " " . $prenom . "\n";
+    if(isset($telephone)){
+        $entete .= "Numéro de téléphone: " . $telephone . "\n";
+    }
+    if(isset($cp)){
+        $entete .= "Code Postal: " . $cp . "\n";
+    }
+    if(isset($ville)){
+        $entete .= "Ville: " . $ville . "\n";
+    }
+    $entete .= "Voici son message: \n";
+    if(mail($to, $sujet, $commentaires, $entete)){
+        $erreur = "Votre message a bien été envoyé.";
+        unset($nom);
+        unset($email);
+        unset($commentaires);
+    }
+    else{
+        $erreur = "Une erreur est survenue, veuillez réessayer plus tard";
+    }
+    
 }
-
 ?>
-<?php
 
-if (!empty($_GET["msg"]))
-{
-$msg = urldecode($_GET["msg"]);
-$msg = stripslashes($msg);
-echo("<div class=\"msg\">$msg</div><br />");
-}
-
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -50,10 +50,15 @@ echo("<div class=\"msg\">$msg</div><br />");
 <script type="text/javascript" src="js/prototype.js"></script>
 <script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
 <script type="text/javascript" src="js/fonctions.js"></script>
-<?php if (count($_POST)) {
-	
-	echo '<script type="text/javascript">alert("Merci, votre message a bien été envoyé.")</script>';
-}
+<?php 
+    if (isset($erreur)){
+        if($erreur == "Votre message a bien été envoyé."){
+            echo '<script type="text/javascript">alert("Merci, votre message a bien été envoyé.")</script>';
+        }
+	else{
+            echo '<script type="text/javascript">alert("Une erreur est survenue, veuillez réessayer plus tard.")</script>';
+        }
+    }
 ?>
 <!--[if lte IE 6]>
    <link href="css/Style_ie6.css" rel="stylesheet" type="text/css" />
@@ -94,25 +99,67 @@ echo("<div class=\"msg\">$msg</div><br />");
                         </div>
                     	<div class="Container_Middle_Footer_Txt">
                             <div id="ContainerIntroForm">
-                                <form method="post" action="contact.php" id="formulaire_contact" onsubmit="verifForm(this); return false;">
+                                <form method="post" action="contact.php" id="formulaire_contact">
                                 	<table style="width:100%;">
                                     	<tr>
-                                        	<td style="width:50%;"><div><label for="nom">Nom : </label><input type="text" id="nom" name="nom" required placeholder="Entrez votre nom" pattern="^[A-Za-zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ/-]+"/><span>Veuillez rentrer votre Nom</span></div></td>
-                                                <td style="width:50%;"><div><label for="prenom">Prénom : </label><input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom" pattern="^[A-Za-zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ/-]+"/><span>Veuillez rentrer votre Prénom</span></div></td>
+                                            <td style="width:50%;">
+                                                <div>
+                                                    <label for="nom">Nom : </label>
+                                                    <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom" pattern="^[A-Za-zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ/-]+" />
+                                                    <span>Veuillez rentrer votre Nom</span>
+                                                </div>
+                                            </td>
+                                            <td style="width:50%;">
+                                                <div>
+                                                    <label for="prenom">Prénom : </label>
+                                                    <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom" pattern="^[A-Za-zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ/-]+"/>
+                                                    <span>Veuillez rentrer votre Prénom</span>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                        	<td style="width:50%;"><div><label for="telephone">Téléphone : </label><input type="text" id="telephone" name="telephone" /></div></td>
-                                            <td style="width:50%;"><div><label for="email">E-mail : </label><input type="email" id="email" name="email" required placeholder="Entrez votre Email"/><span>Veuillez rentrer votre Email</span></div></td>
+                                            <td style="width:50%;">
+                                                <div>
+                                                    <label for="telephone">Téléphone : </label>
+                                                    <input type="text" id="telephone" name="telephone" />
+                                                </div>
+                                            </td>
+                                            <td style="width:50%;">
+                                                <div>
+                                                    <label for="email">E-mail : </label>
+                                                    <input type="email" id="email" name="email" required placeholder="Entrez votre Email"/>
+                                                    <span>Veuillez rentrer votre Email</span>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                        	<td style="width:50%;"><div><label for="cp">Code postal : </label><input type="text" id="cp" name="cp" /></div></td>
-                                            <td style="width:50%;"><div><label for="ville">Ville : </label><input type="text" id="ville" name="ville" /></div></td>
+                                            <td style="width:50%;">
+                                                <div>
+                                                    <label for="cp">Code postal : </label>
+                                                    <input type="text" id="cp" name="cp" />
+                                                </div>
+                                            </td>
+                                            <td style="width:50%;">
+                                                <div>
+                                                    <label for="ville">Ville : </label>
+                                                    <input type="text" id="ville" name="ville" />
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                        	<td colspan="2" style="width:50%;"><div><label for="commentaires">Commentaires :</label><textarea id="commentaires" name="commentaires" rows="2" cols="45" required placeholder="Entrez votre commentaire"></textarea></div></td>
+                                            <td colspan="2" style="width:50%;">
+                                                <div>
+                                                    <label for="commentaires">Commentaires :</label>
+                                                    <textarea id="commentaires" name="commentaires" rows="2" cols="45" required placeholder="Entrez votre commentaire"></textarea>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                        	<td colspan="2" style="width:50%; text-align:center"><div><input type="submit" value="Envoyer le Formulaire" id="mySubmit" class="boutton"/></div></td>
+                                            <td colspan="2" style="width:50%; text-align:center">
+                                                <div>
+                                                    <input type="submit" value="Envoyer le Formulaire" id="mySubmit" class="boutton"/>
+                                                </div>
+                                            </td>
                                         </tr>
                                    </table> 
                                 </form>
@@ -131,14 +178,14 @@ echo("<div class=\"msg\">$msg</div><br />");
                     		}
                     		
                     		?>
-						</div>
+			</div>
                     </div>
                 </div>
             </div>
             <div class="Container_Right"></div>
         </div>
         <div class="Container_Footer">
-        	&copy; 2009 Lumières Du Sud | <a href="#">Crédit</a> | <a href="#">Mentions légales</a> | Création de site Internet : <a href="http://www.inetys.fr" target="_blank">Inetys Communication</a>
+        	&copy; 2009 Lumières Du Sud | <a href="#">Crédit</a> | <a href="#">Mentions légales</a> | Création de site Internet : JD
         </div>
         
     </div>
